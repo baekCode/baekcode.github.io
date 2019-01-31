@@ -6,11 +6,8 @@ tags: about
 ---
 
 
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Type Scale](http://type-scale.com/)
+* [test_naver](http://naver.com)
 
-List of contributors:
+history
 
-- Aaron S. Hawley
+- korea, 1988
