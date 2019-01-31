@@ -6,7 +6,9 @@ tags: about
 ---
 
 
-* [test_naver](http://naver.com)
+* [my github](https://github.com/BaekJueun)
+* [my page](https://baekjueun.github.io)
+* [my youtube](https://www.youtube.com/user/beakjueun)
 
 history
 
