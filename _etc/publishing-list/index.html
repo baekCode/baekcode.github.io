@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta property="og:locale" content="ko">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <title>PUBLISHING UI GUIDE, by NOTSUN</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <link rel="stylesheet" href="http://notsun.com/_Guide/css/guide.css" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-logo">
+            <div class="inner">
+                <h1>NOTSUN</h1>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="inner">
+                <ul>
+                    <li><a href="#section1">기본정보</a></li>
+                    <li><a href="#section2">HTML 리스트</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="title">
+            <div class="inner">
+                <h1>고객사명<span>PUBLISHING LIST</span></h1>
+            </div>
+        </div>
+        <div class="inner">            
+            <div id="section1" class="worklist">
+                <div class="depth1"><span class="subject">기본정보</span></div>
+                <div class="list">
+                    <p>기본정보</p>
+                    <table>
+                        <colgroup>
+                            <col style="width:20%">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>업체명</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>제작유형</th>
+                            <td>RESPONCIVE / PC / MOBILE</td>
+                        </tr>
+                        <tr>
+                            <th>사이트언어</th>
+                            <td>국문 / 영문 / 중문</td>
+                        </tr>
+                        <tr>
+                            <th>작업요구사항</th>
+                            <td>
+                                <ul>
+                                    <li>작업요구사항 작성</li>
+                                    <li>총 일정 및 제작 일정 작성</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>작업환경정의</th>
+                            <td>
+                                <ul>
+                                    <li>문서 및 버전 : HTML5, CSS3</li>
+                                    <li>인코딩 : UTF-8</li>
+                                    <li>웹 유형 : RESPONCIVE / PC / MOBILE</li>
+                                    <li>호환성 : ie / chrome / firefox / safari / opera</li>
+                                    <li>웹접근성 : 기본준수</li>
+                                    <li>디자인 해상도 : 1200px</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기타&이슈</th>
+                            <td>기타 및 이슈 작성</td>
+                        </tr>                        
+                    </table>
+                </div>
+            </div>
+            
+            <div id="section2" class="worklist">
+                    <div class="depth1"><span class="subject">HTML 리스트</span> total :<span class="total"></span> page , completed :<span class="completed"></span> page</div>
+                    <div class="list">
+                        <table class="worklist-pub-list">
+                            <caption>작업 목록</caption>
+                            <colgroup>
+                                <col style="width:5%" />
+                                <col style="width:10%" />
+                                <col style="width:10%" />
+                                <col style="width:10%" />
+                                <col style="width:10%" />
+                                <col style="width:8%" />
+                                <col />
+                                <col style="width:8%" />
+                                <col style="width:8%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>1depth</th>
+                                    <th>2depth</th>
+                                    <th>3depth</th>
+                                    <th>4depth</th>
+                                    <th>형태</th>
+                                    <th>파일경로</th>
+                                    <th>완료일</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row">
+                                    <td>메인</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>HTML/board</td>                              
+                                    <td><a href="#none">d</a></td>
+                                    <td class="finish">2017-01-30</td>
+                                    <td></td>
+                                </tr>    
+                                <!-- 구분 -->
+                                <tr>
+                                    <td colspan="9"></td>
+                                </tr> 
+                                <tr class="row">
+                                    <td>메인</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>HTML/board</td>                             
+                                        <td><a href="#none">d</a></td>
+                                        <td class="finish"></td>
+                                        <td></td>
+                                    </tr>                      
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="http://notsun.com/_Guide/js/guide.js"></script>
+</body>
+
+</html>
