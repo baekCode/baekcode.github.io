@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background: #fff;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-top: 2px solid #000;
+}
+
+table th {
+  height: 50px;
+  background: #f9f9f9;
+}
+
+table td {
+  height: 30px;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+caption {
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+@font-face {
+  font-family: 'KHNPHDotfR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/KHNPHDotfR.eot);
+  src: url(../fonts/KHNPHDotfR?#iefix) format("embedded-opentype"), url(../fonts/KHNPHDotfR.woff2) format("woff2"), url(../fonts/KHNPHDRegular.woff) format("woff"), url(../fonts/KHNPHDotfR.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'KHNPHDotfB';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/KHNPHDotfB.eot);
+  src: url(../fonts/KHNPHDotfB?#iefix) format("embedded-opentype"), url(../fonts/KHNPHDotfB.woff2) format("woff2"), url(../fonts/KHNPHDBold.woff) format("woff"), url(../fonts/KHNPHDotfB.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'KHNPHUotfR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/KHNPHUotfR.eot);
+  src: url(../fonts/KHNPHUotfR?#iefix) format("embedded-opentype"), url(../fonts/KHNPHUotfR.woff2) format("woff2"), url(../fonts/KHNPHURegular.woff) format("woff"), url(../fonts/KHNPHUotfR.ttf) format("truetype");
+}
+
+/********************
+    layout : common
+********************/
+.inner {
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+/********************
+    layout : header
+********************/
+#header {
+  border-bottom: 1px solid #ccc;
+}
+
+#header * {
+  font-family: "Noto Sans KR", Serief;
+}
+
+#header .header-logo {
+  padding: 10px 0;
+  background: #000;
+}
+
+#header .header-logo h1 {
+  width: 150px;
+  height: 30px;
+  text-indent: -999em;
+  background: url(http://notsun.com/images/common/logo.png) no-repeat;
+}
+
+#header .header-nav {
+  padding: 10px 0;
+}
+
+#header .header-nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#header .header-nav li a {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/********************
+    layout : container 
+********************/
+#container {
+  margin: 0 0 50px;
+}
+
+#container * {
+  font-family: "Noto Sans KR", Serief;
+}
+
+/********************
+    layout : footer
+********************/
+/********************
+    ui : GUIDE
+********************/
+.title {
+  padding: 40px 0;
+  background: #eee;
+}
+
+.title h1 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.title h1 span {
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0.3em;
+}
+
+.worklist {
+  position: relative;
+  padding: 20px 0;
+}
+
+.worklist .depth1 {
+  height: 30px;
+  text-align: right;
+}
+
+.worklist .depth1 .subject {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.worklist .list {
+  padding-left: 200px;
+}
+
+.worklist .list tr:first-child th {
+  border-top: 0;
+}
+
+.worklist .list th {
+  text-align: center;
+  font-weight: bold;
+}
+
+.worklist .list th, .worklist .list td {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.worklist .list th ul, .worklist .list td ul {
+  padding-left: 25px;
+}
+
+.worklist .list th ul li, .worklist .list td ul li {
+  line-height: 1.5;
+  list-style-type: disc;
+}
+
+.worklist .list.on {
+  display: block;
+}
+
+.worklist .list > p {
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+/*# sourceMappingURL=guide.css.map */

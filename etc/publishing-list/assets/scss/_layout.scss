@@ -1,0 +1,64 @@
+
+/********************
+    layout : common
+********************/
+.inner {
+    margin:0 auto;
+    padding:0 100px;
+}
+
+
+/********************
+    layout : header
+********************/
+#header {   
+    border-bottom:1px solid #ccc;
+    * {
+        font-family: $font-family-notosans;
+    }
+    .header-logo {
+        padding:10px 0;
+        background:#000;
+
+        h1 {
+            width:150px;
+            height:30px;
+            text-indent: -999em;
+            background:url(http://notsun.com/images/common/logo.png) no-repeat;
+        }
+    }
+
+    .header-nav {
+        padding:10px 0;
+
+        li {
+            display:inline-block;
+            margin-right:20px;
+
+            a {
+                display: block;
+                font-weight: bold;
+                font-size:16px;
+                color:#333;
+            }
+        }
+    }
+}
+
+
+
+/********************
+    layout : container 
+********************/
+#container {
+    margin:0 0 50px;
+
+    * {
+        font-family: $font-family-notosans;
+    }
+}
+
+/********************
+    layout : footer
+********************/
+
