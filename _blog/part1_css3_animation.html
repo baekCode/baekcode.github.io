@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css">
+</head>
+<style>
+body {
+    width:500px;
+  font-family: 'Quicksand', sans-serif;
+  padding: 80px;
+}
+
+.titleAnim {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  overflow: hidden;
+  
+}
+.titleAnim span {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height:1
+  }
+.titleAnim-1bis {
+    width: 150px
+}
+.titleAnim-1 span {
+    top: 100%;
+    font-weight: 300;
+    animation: .4s titleAnim 1s ease forwards;  
+}
+.titleAnim-1bis span {
+    top: -100%;
+    font-weight: 700;
+    animation: .4s titleAnim 1.2s ease forwards;  
+}
+
+
+.titleAnim-2 {
+    left: 80px;
+    animation: .5s titleAnim2 2.5s ease forwards; 
+}
+.titleAnim-2 span {
+    top: 100%;
+    font-weight: 300;
+    animation: .4s titleAnim 2s ease forwards;
+}
+.titleAnim-2bis {
+    width:300px
+}
+.titleAnim-2bis span {
+    top: 0;
+    left: -100%;
+    font-weight: 700;
+    color: #F1D91F;
+    animation: .4s titleAnim2 2.5s ease forwards;
+} 
+
+
+.has-animation {
+  position: relative;
+}
+
+.has-animation p,.has-animation img {
+    opacity: 0;
+}
+.has-animation.animate-in p,.has-animation.animate-in img {
+    animation: textHidden 0.1s 1.1s forwards;
+}
+.has-animation.animate-in:before, .has-animation.animate-in:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 10;
+}
+.has-animation.animate-in:before {
+    background-color: pink;
+}
+.has-animation.animate-in:after {
+    background-color: blue;
+    animation-delay: .5s;
+}
+  
+
+.has-animation.animation-ltr.animate-in:before {
+    animation: revealLTR 1.8s ease;
+}
+.has-animation.animation-ltr.animate-in:after {
+    animation: revealLTR 1s .6s ease;
+}
+
+
+
+
+
+@keyframes textHidden {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes titleAnim {
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes titleAnim2 {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes revealLTR {
+  0%{
+    width: 0;
+    left: 0;
+  }
+  65%{
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+</style>
+<body>
+<!-- 타이틀영역 -->
+<div>
+    <div class="titleAnim titleAnim-1">
+        <span>HELLO</span>
+    </div>
+    <div class="titleAnim titleAnim-1bis">
+        <span>CSS3!</span>
+    </div>
+</div>
+<div>
+    <div class="titleAnim titleAnim-2">
+        <span>HELLO</span>
+    </div>
+    <div class="titleAnim titleAnim-2bis">
+        <span>ANIMATION!</span>
+    </div>
+</div>
+
+<!-- 서머리 -->
+<div class="has-animation animation-ltr" data-delay="2000">
+<p>
+요즘에는 점점 더 많은 웹사이트들이 GIF, SVG, WebGL, 배경 비디오 등의 형태를 이용하여 애니메이션을 사용하고있습니다. 
+제대로 사용한다면 웹 상의 애니메이션들은 웹사이트의 활력을 불어넣고 상호작용을 이끌어낼 수 있으며
+이는 별도의 피드백 요소와 경험을 사용자에게 추가로 제공하는 역할을 할 수 있을 것입니다.
+</p>
+</div>
+
+<!-- 본문 -->
+<div class="has-animation animation-ltr" data-delay="2000">
+    <xmp>
+        <h1>ddd</h1>
+        lkajsdflkjasdflkjasdlfkjasdf   
+        asdfsadf
+    </xmp>
+</div>
+
+<!-- 끝 -->
+<div class="has-animation animation-ltr" data-delay="2000">END ☺</div>
+
+
+<!-- script -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$('.has-animation').each(function(index) {
+    if($(window).scrollTop() + $(window).height() > $(this).offset().top + $(this).outerHeight() ){ 
+        $(this).delay($(this).data('delay')).queue(function(){
+            $(this).addClass('animate-in');
+        });    
+    }   
+});  
+
+$(window).scroll(function() { 
+	$('.has-animation').each(function(index) {
+  		if($(window).scrollTop() + $(window).height() > $(this).offset().top ){ 
+  			$(this).delay($(this).data('delay')).queue(function(){
+      			$(this).addClass('animate-in');
+    		});    
+  		}   
+	});   
+});
+
+</script>
+
+</body>
+</html>
+
