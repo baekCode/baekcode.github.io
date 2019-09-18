@@ -1,0 +1,24 @@
+/* bootstrap use */
+/* HTML5 display-role reset for older browsers */
+@import url(./bootstrap.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/metisMenu/3.0.4/metisMenu.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/3.3.7+1/css/sb-admin-2.min.css);
+@import url(./font-awesome.min.css);
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, code {
+  display: block;
+}
+
+.code-check {
+  background-color: transparent;
+}
+
+.panel-body > ul > li + li {
+  margin-top: 10px;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+}
