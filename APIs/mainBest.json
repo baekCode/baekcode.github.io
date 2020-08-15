@@ -3,6 +3,7 @@
     "title": "베스트 핫딜",
     "items": [
       {
+        "id": 1,
         "name": "[보스 QuietComfort 25 노이즈 캔슬링]",
         "description": "Bose QuietComfort 25 Noise Cancelling Headphones - Factory Renewed",
         "originalPrice": "279.95",
@@ -15,6 +16,7 @@
         }
       },
       {
+        "id": 2,
         "name": "[레이몬드 웨일 2827-STC-00659 오토매틱]",
         "description": "Raymond Weil 2827-STC-00659 Men's Maestro Silver Automatic Watch",
         "originalPrice": "547.00",
@@ -27,6 +29,7 @@
         }
       },
       {
+        "id": 3,
         "name": "[오메가 XL 60캡슐]",
         "description": "Omega XL 60ct by Great HealthWorks: Small, Potent, Joint Pain Relief - Omega-3",
         "originalPrice": "72.00",
