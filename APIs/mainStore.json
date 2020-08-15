@@ -1,0 +1,44 @@
+{
+  "mainStore": [
+    {
+      "title": "뉴발란스",
+      "imgSrc": "//static.itrcomm.com/img/main/promotion/1958777993_1566462326.jpg",
+      "imgAlt": "뉴발란스"
+    },
+    {
+      "title": "리복",
+      "imgSrc": "//static.itrcomm.com/img/main/promotion/101019900_1566462291.jpg",
+      "imgAlt": "리복"
+    },
+    {
+      "title": "샘소나이트",
+      "imgSrc": "//static.itrcomm.com/img/main/promotion/976424492_1580692537.jpg",
+      "imgAlt": "샘소나이트"
+    },
+    {
+      "title": "아디다스",
+      "imgSrc": "//static.itrcomm.com/img/main/promotion/1818680708_1566452854.jpg",
+      "imgAlt": "아디다스"
+    },
+    {
+      "title": "GNC",
+      "imgSrc": "//static.itrcomm.com/img/main/promotion/1593485971_1578561088.jpg",
+      "imgAlt": "GNC"
+    },
+    {
+      "title": "쥬얼리닷컴",
+      "imgSrc": "//static.itrcomm.com/img/main/promotion/2143992711_1589250044.jpg",
+      "imgAlt": "쥬얼리닷컴"
+    },
+    {
+      "title": "레노버",
+      "imgSrc": "//static.itrcomm.com/img/main/promotion/1108820175_1587351863.jpg",
+      "imgAlt": "레노버"
+    },
+    {
+      "title": "보스",
+      "imgSrc": "//static.itrcomm.com/img/main/promotion/11786090_1587352100.jpg",
+      "imgAlt": "보스"
+    }
+  ]
+}
