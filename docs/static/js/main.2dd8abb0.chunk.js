@@ -1,0 +1,2 @@
+(this.webpackJsonpresume=this.webpackJsonpresume||[]).push([[0],{3:function(e,t,n){e.exports=n(8)},8:function(e,t,n){"use strict";n.r(t);var r=n(0),s=n.n(r),a=n(2);var u=function(){return s.a.createElement("div",{className:"App"},"Resume Setting")};n.n(a).a.render(s.a.createElement(u,null),document.getElementById("root"))}},[[3,1,2]]]);
+//# sourceMappingURL=main.2dd8abb0.chunk.js.map
