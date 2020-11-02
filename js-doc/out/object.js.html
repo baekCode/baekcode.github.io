@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: object.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,56 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: object.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @class
+ * @classdesc Dog Classes description
+* */
+const Dog = class {
+    /**
+     * Create dog name &amp; age.
+     * @param {string} - name description
+     * @param {number} - age description
+     * */
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    /**
+     * @method
+     * @return {string} return gog name.
+     * */
+    getName(){
+        return this.name;
+    }
+}
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+/**
+ * @class
+ * @param {string} name set person name.
+ * @param {number} age set person age.
+ * */
+const Person = function(name, age) {
+    this.name = name;
+    this.age = age;
+    /**
+     * @method
+     * @return {string} return person name
+     * */
+    this.getName = function() {
+        return this.name
+    }
+}</code></pre>
+        </article>
+    </section>
 
 
 
