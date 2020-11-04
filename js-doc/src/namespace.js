@@ -29,4 +29,4 @@ NAMESPACE.namespace = function (string) {
 NAMESPACE.namespace('NAMESPACE.module.module2')
 NAMESPACE.namespace('test.name')
 console.log(NAMESPACE)
-// console.log(NAMESPACE.m)
+console.log(NAMESPACE.module)
