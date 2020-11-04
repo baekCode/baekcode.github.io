@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: namespace.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,50 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: namespace.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * namespace parttern
+ * @class
+ * */
+const NAMESPACE = undefined || {}
 
+/**
+ * @method
+ * @param {string}
+ * @return object
+ * */
+NAMESPACE.namespace = function (string) {
+    let splitString = string.split('.');
+    let parent = NAMESPACE;
 
-    <h3> </h3>
+    if (splitString[0] === 'NAMESPACE') {
+        splitString = splitString.slice(1)
+    }
 
+    splitString.forEach((item) => {
+        if( typeof parent[item === undefined]) {
+            parent[item] = {}
+        }
+        parent = parent[item];
+    })
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+    return parent
+}
+NAMESPACE.namespace('NAMESPACE.module.module2')
+NAMESPACE.namespace('test.name')
+console.log(NAMESPACE)
+// console.log(NAMESPACE.m)
+</code></pre>
+        </article>
+    </section>
 
 
 
