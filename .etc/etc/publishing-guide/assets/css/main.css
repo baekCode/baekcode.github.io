@@ -1,9 +1,9 @@
 /* bootstrap use */
 /* HTML5 display-role reset for older browsers */
-@import url(./bootstrap.min.css);
+@import url(etc/publishing-guide/assets/css/bootstrap.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/metisMenu/3.0.4/metisMenu.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/3.3.7+1/css/sb-admin-2.min.css);
-@import url(./font-awesome.min.css);
+@import url(etc/publishing-guide/assets/css/font-awesome.min.css);
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, code {
   display: block;

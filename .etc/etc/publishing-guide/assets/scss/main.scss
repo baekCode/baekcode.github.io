@@ -1,8 +1,8 @@
-@import '_reset.scss';
-@import '_var.scss';
-@import '_component.scss';
-@import '_mixin.scss';
-@import '_ui.scss';
+@import 'reset';
+@import 'var';
+@import 'component';
+@import 'mixin';
+@import 'ui';
 
 @import url(./bootstrap.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/metisMenu/3.0.4/metisMenu.min.css);
