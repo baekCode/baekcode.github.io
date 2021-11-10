@@ -1,0 +1,5 @@
+import React from 'react'
+
+export default function Text({ text }: { text: string }) {
+  return <div>{text}</div>
+}
