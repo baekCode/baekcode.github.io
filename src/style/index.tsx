@@ -9,6 +9,7 @@ const defaultStyle = css`
     margin: 0;
     box-sizing: border-box;
     font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
   }
 
   html,
