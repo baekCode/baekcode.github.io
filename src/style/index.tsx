@@ -23,6 +23,10 @@ const defaultStyle = css`
     text-decoration: none;
     cursor: pointer;
   }
+
+  img {
+    max-width: 100%;
+  }
 `;
 
 const GlobalStyle: FunctionComponent = function () {
