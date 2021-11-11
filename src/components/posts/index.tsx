@@ -36,17 +36,24 @@ function Post({ title, date, categories, summary, thumbnail, link }: IPost) {
 export default function Posts({ posts }: IPosts) {
   return (
     <Container>
-      {posts.map(({ title, date, categories, summary, thumbnail, link }) => (
-        <Post
-          key={title}
-          title={title}
-          date={date}
-          categories={categories}
-          summary={summary}
-          thumbnail={thumbnail}
-          link={link}
-        />
-      ))}
+      {posts.map(
+        ({
+          node: {
+            id,
+            frontmatter: { title, summary, date, categories, thumbnail },
+          },
+        }) => (
+          <Post
+            key={id}
+            title={title}
+            date={date}
+            categories={categories}
+            summary={summary}
+            thumbnail={thumbnail}
+            link={id}
+          />
+        ),
+      )}
     </Container>
   );
 }
