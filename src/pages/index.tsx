@@ -1,18 +1,10 @@
-import { graphql } from 'gatsby'
-import React from 'react'
-import Text from '../components/Text'
+import { graphql } from 'gatsby';
+import React from 'react';
 
-interface IIndexProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
-        description: string
-        author: string
-      }
-    }
-  }
-}
+import Layout from '../components/layout';
+import Text from '../components/Text';
+import { IIndexProps } from './types';
+
 export default function Index({
   data: {
     site: {
@@ -21,14 +13,14 @@ export default function Index({
   },
 }: IIndexProps) {
   return (
-    <div>
+    <Layout title={title}>
       <div>
         <Text text={title} />
         <Text text={description} />
         <Text text={author} />
       </div>
-    </div>
-  )
+    </Layout>
+  );
 }
 
 export const metadataQuery = graphql`
@@ -41,4 +33,4 @@ export const metadataQuery = graphql`
       }
     }
   }
-`
+`;
