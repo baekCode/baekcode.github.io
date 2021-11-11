@@ -5,12 +5,12 @@ import Header from './Header';
 import { Container } from './style';
 import { ILayout } from './types';
 
-export default function Layout({ children, title }: ILayout) {
+export default function Layout({ children }: ILayout) {
   return (
     <>
       <GlobalStyle />
       <Container>
-        <Header title={title || `Title`} />
+        <Header title={`Title`} />
         <main>{children}</main>
         <footer
           style={{
