@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 
 import { Item } from './style';
@@ -9,7 +10,9 @@ export default function Category({ selectedCategory, categoryList }: ICategory) 
       <ul>
         {Object.entries(categoryList).map(([name, count]) => (
           <Item key={name} active={selectedCategory === name}>
-            {name} #{count}
+            <Link to={`/?category=${name}`}>
+              {name} #{count}
+            </Link>
           </Item>
         ))}
       </ul>
