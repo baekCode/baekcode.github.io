@@ -19,8 +19,12 @@ export const Thumbnail = styled.img`
   ${tw`w-full h-40 rounded-t-md object-cover`}
 `;
 
+export const Inner = styled.div`
+  ${tw`p-3`}
+`;
+
 export const Title = styled.div`
-  ${tw`overflow-hidden my-3 overflow-ellipsis whitespace-normal break-words line-clamp-2 font-bold text-xl`}
+  ${tw`overflow-hidden mb-3 overflow-ellipsis whitespace-normal break-words line-clamp-2 font-bold text-xl`}
 
   -webkit-box-orient: vertical;
 `;
@@ -38,7 +42,7 @@ export const CategoryItem = styled.div`
 `;
 
 export const Summary = styled.div`
-  ${tw`overflow-hidden my-3 overflow-ellipsis whitespace-normal break-words line-clamp-2 opacity-80`}
+  ${tw`overflow-hidden mt-3 overflow-ellipsis whitespace-normal break-words line-clamp-2 opacity-80`}
 
   -webkit-box-orient: vertical;
 `;
