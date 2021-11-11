@@ -2,7 +2,6 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import { CATEGORY } from '../_mock/category';
-import { POSTS } from '../_mock/posts';
 import Category from '../components/category';
 import Layout from '../components/layout';
 import Posts from '../components/posts';
@@ -10,26 +9,31 @@ import { IIndexProps } from './types';
 
 export default function Index({
   data: {
-    site: {
-      siteMetadata: { title },
-    },
+    allMarkdownRemark: { edges: posts },
   },
 }: IIndexProps) {
   return (
-    <Layout title={title}>
+    <Layout>
       <Category selectedCategory="Web" categoryList={CATEGORY} />
-      <Posts posts={POSTS} />
+      <Posts posts={posts} />
     </Layout>
   );
 }
 
-export const metadataQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        title
-        description
-        author
+export const getPostList = graphql`
+  query getPostList {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            summary
+            date(formatString: "YYYY.MM.DD.")
+            categories
+            thumbnail
+          }
+        }
       }
     }
   }
