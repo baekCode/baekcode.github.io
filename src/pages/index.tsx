@@ -1,13 +1,15 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import queryString from 'query-string';
+import React, { useMemo } from 'react';
 
-import { CATEGORY } from '../_mock/category';
 import Category from '../components/category';
+import { ICategory } from '../components/category/types';
 import Layout from '../components/layout';
 import Posts from '../components/posts';
 import { IIndexProps } from './types';
 
 export default function Index({
+  location: { search },
   data: {
     allMarkdownRemark: { edges: posts },
     file: {
@@ -15,10 +17,38 @@ export default function Index({
     },
   },
 }: IIndexProps) {
-  console.log({ gatsbyImageData });
+  const parsed = queryString.parse(search);
+  const selectedCategory =
+    typeof parsed.category !== 'string' || !parsed.category ? 'All' : parsed.category;
+
+  console.log({ search, gatsbyImageData, parsed });
+  const categoryList = useMemo(
+    () =>
+      posts.reduce(
+        (
+          list: ICategory['categoryList'],
+          {
+            node: {
+              frontmatter: { categories },
+            },
+          }: { node: { frontmatter: { categories: string[] } } },
+        ) => {
+          categories.forEach(category => {
+            if (list[category] === undefined) list[category] = 1;
+            else list[category]++;
+          });
+          list['All']++;
+          return list;
+        },
+        { All: 0 },
+      ),
+    [],
+  );
+
+  console.log(categoryList);
   return (
     <Layout>
-      <Category selectedCategory="Web" categoryList={CATEGORY} />
+      <Category selectedCategory={selectedCategory} categoryList={categoryList} />
       <Posts posts={posts} />
     </Layout>
   );

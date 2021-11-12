@@ -20,6 +20,7 @@ export type TGraphQlPosts = {
 };
 
 export interface IIndexProps {
+  location: { search: string };
   data: {
     allMarkdownRemark: {
       edges: TGraphQlPosts[];
