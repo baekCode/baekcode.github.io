@@ -1,5 +1,6 @@
 import { css, Global } from '@emotion/react';
 import React, { FunctionComponent } from 'react';
+import tw from 'twin.macro';
 
 const defaultStyle = css`
   @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
@@ -27,6 +28,13 @@ const defaultStyle = css`
 
   img {
     max-width: 100%;
+  }
+  .utterances {
+    ${tw`w-full max-w-full pt-4`}
+    border-top: 1px solid #eee;
+    .utterances-frame {
+      ${tw`px-5 sm:px-10`}
+    }
   }
 `;
 

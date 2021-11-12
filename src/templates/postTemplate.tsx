@@ -3,6 +3,7 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import PostBody from '../components/posts/body';
+import Comment from '../components/posts/comment';
 import PostHead from '../components/posts/head';
 import { TPost } from '../pages/types';
 
@@ -41,6 +42,7 @@ export default function PostTemplate({
     <Layout>
       <PostHead thumbnail={gatsbyImageData} title={title} date={date} categories={categories} />
       <PostBody html={html} />
+      <Comment />
     </Layout>
   );
 }
