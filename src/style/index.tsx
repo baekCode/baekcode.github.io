@@ -4,6 +4,7 @@ import tw from 'twin.macro';
 
 const defaultStyle = css`
   @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 
   * {
     padding: 0;
