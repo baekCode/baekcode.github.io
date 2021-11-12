@@ -1,9 +1,25 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-export default function PostTemplate(props) {
-  console.log(props);
-  return <div>PostTemplate</div>;
+import Layout from '../components/layout';
+import { TPost } from '../pages/types';
+
+interface IPostTemplate {
+  data: {
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          html: string;
+          frontmatter: TPost;
+        };
+      }[];
+    };
+  };
+}
+
+export default function PostTemplate({ data }: IPostTemplate) {
+  console.log(data);
+  return <Layout>PostTemplate</Layout>;
 }
 
 export const queryMarkdownDataBySlug = graphql`
