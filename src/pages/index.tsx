@@ -45,7 +45,6 @@ export default function Index({
     [],
   );
 
-  console.log(categoryList);
   return (
     <Layout>
       <Category selectedCategory={selectedCategory} categoryList={categoryList} />
