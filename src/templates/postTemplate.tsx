@@ -2,6 +2,8 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import Layout from '../components/layout';
+import PostBody from '../components/posts/body';
+import PostHead from '../components/posts/head';
 import { TPost } from '../pages/types';
 
 interface IPostTemplate {
@@ -17,9 +19,30 @@ interface IPostTemplate {
   };
 }
 
-export default function PostTemplate({ data }: IPostTemplate) {
-  console.log(data);
-  return <Layout>PostTemplate</Layout>;
+export default function PostTemplate({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}: IPostTemplate) {
+  const {
+    node: {
+      html,
+      frontmatter: {
+        title,
+        date,
+        categories,
+        thumbnail: {
+          childImageSharp: { gatsbyImageData },
+        },
+      },
+    },
+  } = edges[0];
+  return (
+    <Layout>
+      <PostHead thumbnail={gatsbyImageData} title={title} date={date} categories={categories} />
+      <PostBody html={html} />
+    </Layout>
+  );
 }
 
 export const queryMarkdownDataBySlug = graphql`
