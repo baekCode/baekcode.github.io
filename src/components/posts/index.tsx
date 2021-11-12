@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import {
   Category,
@@ -47,10 +47,22 @@ function Post({ post }: IPost) {
   );
 }
 
-export default function Posts({ posts }: IPosts) {
+export default function Posts({ selectedCategory, posts }: IPosts) {
+  const postsData = useMemo(
+    () =>
+      posts.filter(
+        ({
+          node: {
+            frontmatter: { categories },
+          },
+        }) => (selectedCategory !== 'All' ? categories.includes(selectedCategory) : true),
+      ),
+    [selectedCategory],
+  );
+
   return (
     <Container>
-      {posts.map(post => (
+      {postsData.map(post => (
         <Post key={post.node.id} post={post} />
       ))}
     </Container>

@@ -5,5 +5,6 @@ export interface IPost {
 }
 
 export interface IPosts {
+  selectedCategory: string;
   posts: TGraphQlPosts[];
 }

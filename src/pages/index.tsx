@@ -49,7 +49,7 @@ export default function Index({
   return (
     <Layout>
       <Category selectedCategory={selectedCategory} categoryList={categoryList} />
-      <Posts posts={posts} />
+      <Posts selectedCategory={selectedCategory} posts={posts} />
     </Layout>
   );
 }
