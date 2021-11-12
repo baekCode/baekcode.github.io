@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
@@ -15,7 +16,7 @@ export const Item = styled(Link)`
   }
 `;
 
-export const Thumbnail = styled.img`
+export const Thumbnail = styled(GatsbyImage)`
   ${tw`w-full h-40 rounded-t-md object-cover`}
 `;
 

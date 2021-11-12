@@ -13,10 +13,24 @@ import {
 } from './style';
 import { IPost, IPosts } from './types';
 
-function Post({ title, date, categories, summary, thumbnail, link }: IPost) {
+function Post({ post }: IPost) {
+  const {
+    node: {
+      id,
+      frontmatter: {
+        title,
+        thumbnail: {
+          childImageSharp: { gatsbyImageData },
+        },
+        date,
+        summary,
+        categories,
+      },
+    },
+  } = post;
   return (
-    <Item to={link}>
-      <Thumbnail src={thumbnail} alt="" />
+    <Item to={id}>
+      <Thumbnail image={gatsbyImageData} alt={`${title} Thumbnail`} />
       <Inner>
         <Title children={title} />
         <Date children={date} />
@@ -36,24 +50,9 @@ function Post({ title, date, categories, summary, thumbnail, link }: IPost) {
 export default function Posts({ posts }: IPosts) {
   return (
     <Container>
-      {posts.map(
-        ({
-          node: {
-            id,
-            frontmatter: { title, summary, date, categories, thumbnail },
-          },
-        }) => (
-          <Post
-            key={id}
-            title={title}
-            date={date}
-            categories={categories}
-            summary={summary}
-            thumbnail={thumbnail}
-            link={id}
-          />
-        ),
-      )}
+      {posts.map(post => (
+        <Post key={post.node.id} post={post} />
+      ))}
     </Container>
   );
 }

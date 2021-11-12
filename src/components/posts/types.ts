@@ -1,14 +1,9 @@
-import { TGraphQlPost } from '../../pages/types';
+import { TGraphQlPosts } from '../../pages/types';
 
 export interface IPost {
-  title: string;
-  summary: string;
-  date: string;
-  categories: string[];
-  thumbnail: string;
-  link: string;
+  post: TGraphQlPosts;
 }
 
 export interface IPosts {
-  posts: TGraphQlPost[];
+  posts: TGraphQlPosts[];
 }
