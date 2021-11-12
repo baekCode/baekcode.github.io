@@ -10,8 +10,12 @@ import { IIndexProps } from './types';
 export default function Index({
   data: {
     allMarkdownRemark: { edges: posts },
+    file: {
+      childImageSharp: { gatsbyImageData },
+    },
   },
 }: IIndexProps) {
+  console.log({ gatsbyImageData });
   return (
     <Layout>
       <Category selectedCategory="Web" categoryList={CATEGORY} />
@@ -31,9 +35,18 @@ export const getPostList = graphql`
             summary
             date(formatString: "YYYY.MM.DD.")
             categories
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(width: 200)
+              }
+            }
           }
         }
+      }
+    }
+    file(name: { eq: "profile-image" }) {
+      childImageSharp {
+        gatsbyImageData(width: 120, height: 120)
       }
     }
   }
