@@ -17,7 +17,7 @@ import { IPost, IPosts } from './types';
 function Post({ post }: IPost) {
   const {
     node: {
-      id,
+      fields: { slug },
       frontmatter: {
         title,
         thumbnail: {
@@ -30,7 +30,7 @@ function Post({ post }: IPost) {
     },
   } = post;
   return (
-    <Item to={id}>
+    <Item to={slug}>
       <Thumbnail image={gatsbyImageData} alt={`${title} Thumbnail`} />
       <Inner>
         <Title children={title} />

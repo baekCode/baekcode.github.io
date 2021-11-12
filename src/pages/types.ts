@@ -15,6 +15,9 @@ export type TPost = {
 export type TGraphQlPosts = {
   node: {
     id: string;
+    fields: {
+      slug: string;
+    };
     frontmatter: TPost;
   };
 };
