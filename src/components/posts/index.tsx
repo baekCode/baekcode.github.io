@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 
+import useInfiniteScroll from '../../hooks/useInfiniteScroll';
 import {
   Category,
   CategoryItem,
@@ -48,20 +49,21 @@ function Post({ post }: IPost) {
 }
 
 export default function Posts({ selectedCategory, posts }: IPosts) {
+  const { containerRef, postList } = useInfiniteScroll(selectedCategory, posts);
   const postsData = useMemo(
     () =>
-      posts.filter(
+      postList.filter(
         ({
           node: {
             frontmatter: { categories },
           },
         }) => (selectedCategory !== 'All' ? categories.includes(selectedCategory) : true),
       ),
-    [selectedCategory],
+    [selectedCategory, postList],
   );
 
   return (
-    <Container>
+    <Container ref={containerRef}>
       {postsData.map(post => (
         <Post key={post.node.id} post={post} />
       ))}
