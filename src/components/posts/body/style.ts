@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 export const MarkdownRenderer = styled.div`
-  ${tw`flex flex-col w-full p-5 sm:p-10 leading-6 break-all`}
+  ${tw`flex flex-col w-full p-5 sm:p-10 leading-6 break-all bg-white`}
 
   p {
     ${tw`py-2`}
