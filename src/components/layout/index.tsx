@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -14,6 +15,7 @@ export default function Layout({
   selectedCategory,
   categoryList,
   logo,
+  footerLink,
   children,
 }: ILayout) {
   return (
@@ -59,7 +61,9 @@ export default function Layout({
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
+          <Link to={footerLink} target={'_blank'}>
+            © {title}
+          </Link>
         </Footer>
       </Container>
     </>

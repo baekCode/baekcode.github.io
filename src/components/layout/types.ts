@@ -7,6 +7,7 @@ export interface ILayout {
   image: string;
   children: ReactNode;
   logo: string;
+  footerLink: string;
   selectedCategory?: string;
   categoryList?: {
     [key: string]: number;

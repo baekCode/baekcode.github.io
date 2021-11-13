@@ -11,6 +11,7 @@ interface IAbout {
         description: string;
         siteUrl: string;
         avatarImg: string;
+        githubUrl: string;
       };
     };
   };
@@ -19,7 +20,7 @@ interface IAbout {
 export default function About({
   data: {
     site: {
-      siteMetadata: { title, description, siteUrl, avatarImg },
+      siteMetadata: { title, description, siteUrl, avatarImg, githubUrl },
     },
   },
 }: IAbout) {
@@ -30,6 +31,7 @@ export default function About({
       url={siteUrl}
       logo={avatarImg}
       image={avatarImg}
+      footerLink={githubUrl}
     >
       About
     </Layout>
@@ -44,6 +46,7 @@ export const getPostList = graphql`
         description
         siteUrl
         avatarImg
+        githubUrl
       }
     }
   }

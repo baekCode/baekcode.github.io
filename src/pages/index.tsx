@@ -39,6 +39,7 @@ export interface IIndexProps {
         description: string;
         siteUrl: string;
         avatarImg: string;
+        githubUrl: string;
       };
     };
     allMarkdownRemark: {
@@ -57,7 +58,7 @@ export default function Index({
   location: { search },
   data: {
     site: {
-      siteMetadata: { title, description, siteUrl, avatarImg },
+      siteMetadata: { title, description, siteUrl, avatarImg, githubUrl },
     },
     allMarkdownRemark: { edges: posts },
     file: {
@@ -103,6 +104,7 @@ export default function Index({
       selectedCategory={selectedCategory}
       categoryList={categoryList}
       logo={avatarImg}
+      footerLink={githubUrl}
     >
       <Posts selectedCategory={selectedCategory} posts={posts} />
     </Layout>
@@ -117,6 +119,7 @@ export const getPostList = graphql`
         description
         siteUrl
         avatarImg
+        githubUrl
       }
     }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }) {
