@@ -30,6 +30,7 @@ export default function Layout({ title, description, url, image, children }: ILa
         <meta name="twitter:site" content="@baekcode" />
         <meta name="twitter:creator" content="@baekcode" />
         <link rel="canonical" href={url} />
+        <meta name="google-site-verification" content="lbgradPGc5SxVkGEYQ3qAKDAjWiTrU_tCVQ35_sUhgU" />
       </Helmet>
       <GlobalStyle />
       <Container>
