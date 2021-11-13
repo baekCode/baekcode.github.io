@@ -6,6 +6,7 @@ import React, { useMemo } from 'react';
 import { ICategory } from '../components/category/types';
 import Layout from '../components/layout';
 import Posts from '../components/posts';
+import Visual from '../components/visual';
 
 export type TPost = {
   title: string;
@@ -106,6 +107,7 @@ export default function Index({
       logo={avatarImg}
       footerLink={githubUrl}
     >
+      <Visual />
       <Posts selectedCategory={selectedCategory} posts={posts} />
     </Layout>
   );
