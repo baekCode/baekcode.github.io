@@ -10,8 +10,8 @@ export default function Layout({ title, description, url, image, children }: ILa
   return (
     <>
       <Helmet>
+        <html lang="ko" />
         <title>{title}</title>
-
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
