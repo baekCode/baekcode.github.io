@@ -8,7 +8,7 @@ import GlobalStyle from '../style';
 const Container = styled.div`
   ${tw`flex flex-col items-center justify-center text-center`}
   * {
-    font-family: 'Nunito Sans';
+    font-family: 'Noto Serif KR';
   }
   h1 {
     ${tw`relative text-7xl sm:text-9xl`}

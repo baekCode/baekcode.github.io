@@ -3,8 +3,7 @@ import React, { FunctionComponent } from 'react';
 import tw from 'twin.macro';
 
 const defaultStyle = css`
-  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&family=Noto+Serif+KR&display=swap');
 
   * {
     padding: 0;
