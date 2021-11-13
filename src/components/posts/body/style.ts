@@ -40,7 +40,11 @@ export const MarkdownRenderer = styled.div`
 
   // Adjust Quotation Element Style
   blockquote {
-    ${tw`my-5 py-1 px-4 border-l-2 border-gray-300 font-bold`}
+    ${tw`my-5 py-1 px-4 rounded font-light text-xs text-gray-400 bg-gray-50`}
+    border-left: 2px solid #ccc;
+    p {
+      ${tw`font-light text-sm text-gray-400`}
+    }
   }
 
   // Adjust List Element Style
