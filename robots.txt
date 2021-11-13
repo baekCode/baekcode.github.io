@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://baekcode.github.io/sitemap/sitemap-index.xml
+Host: https://baekcode.github.io
