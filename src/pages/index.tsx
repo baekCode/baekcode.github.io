@@ -38,6 +38,7 @@ export interface IIndexProps {
         title: string;
         description: string;
         siteUrl: string;
+        avatarImg: string;
       };
     };
     allMarkdownRemark: {
@@ -56,7 +57,7 @@ export default function Index({
   location: { search },
   data: {
     site: {
-      siteMetadata: { title, description, siteUrl },
+      siteMetadata: { title, description, siteUrl, avatarImg },
     },
     allMarkdownRemark: { edges: posts },
     file: {
@@ -69,7 +70,6 @@ export default function Index({
   const selectedCategory =
     typeof parsed.category !== 'string' || !parsed.category ? 'All' : parsed.category;
 
-  console.log({ search, gatsbyImageData, parsed });
   const categoryList = useMemo(
     () =>
       posts.reduce(
@@ -93,6 +93,7 @@ export default function Index({
     [],
   );
 
+  console.log(gatsbyImageData);
   return (
     <Layout
       title={title}
@@ -101,6 +102,7 @@ export default function Index({
       image={publicURL}
       selectedCategory={selectedCategory}
       categoryList={categoryList}
+      logo={avatarImg}
     >
       <Posts selectedCategory={selectedCategory} posts={posts} />
     </Layout>
@@ -114,6 +116,7 @@ export const getPostList = graphql`
         title
         description
         siteUrl
+        avatarImg
       }
     }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }) {
@@ -137,9 +140,9 @@ export const getPostList = graphql`
         }
       }
     }
-    file(name: { eq: "profile-image" }) {
+    file(name: { eq: "main-image" }) {
       childImageSharp {
-        gatsbyImageData(width: 120, height: 120)
+        gatsbyImageData
       }
       publicURL
     }

@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `baekcode Front-end & UI Developer`,
+    title: `DEV baekcode`,
     description: `Front-end & UI Developer Blog`,
     author: `@baekcode`,
     siteUrl: `https://baekcode.github.io/`,
+    avatarImg: `https://avatars.githubusercontent.com/u/44539224?v=4`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -3,10 +3,19 @@ import { Helmet } from 'react-helmet';
 
 import GlobalStyle from '../../style';
 import Header from './Header';
-import { Container } from './style';
+import { Container, Contents, Footer } from './style';
 import { ILayout } from './types';
 
-export default function Layout({ title, description, url, image, children }: ILayout) {
+export default function Layout({
+  title,
+  description,
+  url,
+  image,
+  selectedCategory,
+  categoryList,
+  logo,
+  children,
+}: ILayout) {
   return (
     <>
       <Helmet>
@@ -38,15 +47,20 @@ export default function Layout({ title, description, url, image, children }: ILa
       </Helmet>
       <GlobalStyle />
       <Container>
-        <Header title={`Title`} />
-        <main>{children}</main>
-        <footer
+        <Header
+          title={title}
+          logo={logo}
+          selectedCategory={selectedCategory}
+          categoryList={categoryList}
+        />
+        <Contents>{children}</Contents>
+        <Footer
           style={{
             marginTop: `2rem`,
           }}
         >
           © {new Date().getFullYear()}, Built with
-        </footer>
+        </Footer>
       </Container>
     </>
   );

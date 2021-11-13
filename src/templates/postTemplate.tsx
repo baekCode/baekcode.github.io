@@ -9,6 +9,12 @@ import { TPost } from '../pages';
 
 interface IPostTemplate {
   data: {
+    site: {
+      siteMetadata: {
+        title: string;
+        avatarImg: string;
+      };
+    };
     allMarkdownRemark: {
       edges: {
         node: {
@@ -25,6 +31,9 @@ interface IPostTemplate {
 
 export default function PostTemplate({
   data: {
+    site: {
+      siteMetadata: { title: siteTitle, avatarImg },
+    },
     allMarkdownRemark: { edges },
   },
   location: { href },
@@ -45,7 +54,7 @@ export default function PostTemplate({
     },
   } = edges[0];
   return (
-    <Layout title={title} description={summary} url={href} image={publicURL}>
+    <Layout title={siteTitle} description={summary} url={href} image={publicURL} logo={avatarImg}>
       <PostHead thumbnail={gatsbyImageData} title={title} date={date} categories={categories} />
       <PostBody html={html} />
       <Comment />
@@ -55,6 +64,12 @@ export default function PostTemplate({
 
 export const queryMarkdownDataBySlug = graphql`
   query queryMarkdownDataBySlug($slug: String) {
+    site {
+      siteMetadata {
+        title
+        avatarImg
+      }
+    }
     allMarkdownRemark(filter: { fields: { slug: { eq: $slug } } }) {
       edges {
         node {

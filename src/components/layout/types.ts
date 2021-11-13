@@ -6,4 +6,9 @@ export interface ILayout {
   url: string;
   image: string;
   children: ReactNode;
+  logo: string;
+  selectedCategory?: string;
+  categoryList?: {
+    [key: string]: number;
+  };
 }
