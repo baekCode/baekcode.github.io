@@ -29,6 +29,7 @@ export default function Layout({ title, description, url, image, children }: ILa
         <meta name="twitter:image" content={image} />
         <meta name="twitter:site" content="@baekcode" />
         <meta name="twitter:creator" content="@baekcode" />
+        <link rel="canonical" href={url} />
       </Helmet>
       <GlobalStyle />
       <Container>

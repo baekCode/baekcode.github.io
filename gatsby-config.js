@@ -7,6 +7,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://baekcode.github.io/',
+        stripQueryString: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

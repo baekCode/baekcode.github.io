@@ -35,7 +35,11 @@ const Nav = styled.div`
 `;
 
 const NotFoundPage: FunctionComponent = function () {
-  const onClickGoBack = () => window.history.back();
+  const onClickGoBack = () => {
+    if (typeof window === 'undefined' || !window.document) return;
+    window.history.back();
+  };
+
   return (
     <Container>
       <GlobalStyle />
