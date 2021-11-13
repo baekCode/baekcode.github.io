@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 export const Container = styled.div`
-  ${tw`grid gap-4 grid-cols-2 md:grid-cols-4`}
+  ${tw`grid gap-4 grid-cols-2 md:grid-cols-4 px-5 py-2 sm:px-10 sm:py-5`}
 `;
 
 export const Item = styled(Link)`
-  ${tw`flex flex-col rounded shadow`}
+  ${tw`flex flex-col rounded bg-white shadow`}
   transition: 0.3s box-shadow;
 
   &:hover {
@@ -17,7 +17,7 @@ export const Item = styled(Link)`
 `;
 
 export const Thumbnail = styled(GatsbyImage)`
-  ${tw`w-full h-40 rounded-t-md object-cover`}
+  ${tw`w-full h-40 shadow-sm rounded-t-md object-cover`}
 `;
 
 export const Inner = styled.div`
