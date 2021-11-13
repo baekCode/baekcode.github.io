@@ -1,0 +1,80 @@
+
+
+
+/********************
+    ui : GUIDE
+********************/
+.title {
+    padding:40px 0;
+    background:#eee;
+    h1 {
+        font-weight:bold;
+        font-size:32px;
+
+        span {
+            margin-left:10px;
+            font-weight:normal;
+            font-size:18px;
+            letter-spacing: 0.3em;
+        }
+    }
+}
+
+.worklist {
+    position: relative;
+    padding:20px 0;
+
+    .depth1 {
+        height:30px;
+        text-align:right;
+
+        .subject {
+            position: absolute;
+            top:50px;
+            left:0;
+            font-weight:bold;
+            font-size:30px;
+        }
+    }
+
+    .list {
+        padding-left:200px;
+
+        tr:first-child  th {
+            border-top:0;
+        }
+        th {
+            text-align:center;
+             font-weight:bold;
+        }
+        th, td {
+            border:1px solid #ddd;
+            padding: 5px;
+            
+            ul {
+                padding-left: 25px;
+
+                li {
+                    line-height:1.5;
+                    list-style-type: disc;
+                }
+            }
+            
+        }
+
+        &.on {
+            display:block;
+        }
+        >p {
+            padding:10px 0;
+            font-weight:bold;
+            font-size:18px;
+        }
+
+    }
+}
+
+
+
+
+
