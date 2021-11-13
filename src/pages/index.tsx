@@ -3,7 +3,6 @@ import { IGatsbyImageData } from 'gatsby-plugin-image';
 import queryString from 'query-string';
 import React, { useMemo } from 'react';
 
-import Category from '../components/category';
 import { ICategory } from '../components/category/types';
 import Layout from '../components/layout';
 import Posts from '../components/posts';
@@ -95,8 +94,14 @@ export default function Index({
   );
 
   return (
-    <Layout title={title} description={description} url={siteUrl} image={publicURL}>
-      <Category selectedCategory={selectedCategory} categoryList={categoryList} />
+    <Layout
+      title={title}
+      description={description}
+      url={siteUrl}
+      image={publicURL}
+      selectedCategory={selectedCategory}
+      categoryList={categoryList}
+    >
       <Posts selectedCategory={selectedCategory} posts={posts} />
     </Layout>
   );
