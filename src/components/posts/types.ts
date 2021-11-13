@@ -1,4 +1,4 @@
-import { TGraphQlPosts } from '../../pages/types';
+import { TGraphQlPosts } from '../../pages/';
 
 export interface IPost {
   post: TGraphQlPosts;

@@ -1,6 +1,6 @@
 import { MutableRefObject, useEffect, useMemo, useRef, useState } from 'react';
 
-import { TGraphQlPosts } from '../pages/types';
+import { TGraphQlPosts } from '../pages';
 
 export type useInfiniteScrollType = {
   containerRef: MutableRefObject<HTMLDivElement | null>;
