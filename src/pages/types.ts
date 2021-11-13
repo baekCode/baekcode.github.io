@@ -9,6 +9,7 @@ export type TPost = {
     childImageSharp: {
       gatsbyImageData: IGatsbyImageData;
     };
+    publicURL: string;
   };
 };
 
@@ -25,6 +26,13 @@ export type TGraphQlPosts = {
 export interface IIndexProps {
   location: { search: string };
   data: {
+    site: {
+      siteMetadata: {
+        title: string;
+        description: string;
+        siteUrl: string;
+      };
+    };
     allMarkdownRemark: {
       edges: TGraphQlPosts[];
     };
@@ -32,6 +40,7 @@ export interface IIndexProps {
       childImageSharp: {
         gatsbyImageData: IGatsbyImageData;
       };
+      publicURL: string;
     };
   };
 }

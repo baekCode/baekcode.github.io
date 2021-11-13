@@ -18,12 +18,16 @@ interface IPostTemplate {
       }[];
     };
   };
+  location: {
+    href: string;
+  };
 }
 
 export default function PostTemplate({
   data: {
     allMarkdownRemark: { edges },
   },
+  location: { href },
 }: IPostTemplate) {
   const {
     node: {
@@ -31,15 +35,17 @@ export default function PostTemplate({
       frontmatter: {
         title,
         date,
+        summary,
         categories,
         thumbnail: {
           childImageSharp: { gatsbyImageData },
+          publicURL,
         },
       },
     },
   } = edges[0];
   return (
-    <Layout>
+    <Layout title={title} description={summary} url={href} image={publicURL}>
       <PostHead thumbnail={gatsbyImageData} title={title} date={date} categories={categories} />
       <PostBody html={html} />
       <Comment />
@@ -62,6 +68,7 @@ export const queryMarkdownDataBySlug = graphql`
               childImageSharp {
                 gatsbyImageData
               }
+              publicURL
             }
           }
         }

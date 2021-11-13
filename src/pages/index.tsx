@@ -11,9 +11,13 @@ import { IIndexProps } from './types';
 export default function Index({
   location: { search },
   data: {
+    site: {
+      siteMetadata: { title, description, siteUrl },
+    },
     allMarkdownRemark: { edges: posts },
     file: {
       childImageSharp: { gatsbyImageData },
+      publicURL,
     },
   },
 }: IIndexProps) {
@@ -46,7 +50,7 @@ export default function Index({
   );
 
   return (
-    <Layout>
+    <Layout title={title} description={description} url={siteUrl} image={publicURL}>
       <Category selectedCategory={selectedCategory} categoryList={categoryList} />
       <Posts selectedCategory={selectedCategory} posts={posts} />
     </Layout>
@@ -55,6 +59,13 @@ export default function Index({
 
 export const getPostList = graphql`
   query getPostList {
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+      }
+    }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }) {
       edges {
         node {
@@ -80,6 +91,7 @@ export const getPostList = graphql`
       childImageSharp {
         gatsbyImageData(width: 120, height: 120)
       }
+      publicURL
     }
   }
 `;
