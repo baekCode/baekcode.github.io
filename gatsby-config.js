@@ -5,6 +5,7 @@ module.exports = {
     author: `@baekcode`,
     siteUrl: `https://baekcode.github.io/`,
     avatarImg: `https://avatars.githubusercontent.com/u/44539224?v=4`,
+    githubUrl: `https://github.com/baekcode`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
