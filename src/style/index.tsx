@@ -1,8 +1,7 @@
-import { css, Global } from '@emotion/react';
-import React, { FunctionComponent } from 'react';
+import { createGlobalStyle } from 'styled-components';
 import tw from 'twin.macro';
 
-const defaultStyle = css`
+const GlobalStyle = createGlobalStyle<{ bgColor?: string }>`
   @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&family=Noto+Serif+KR&display=swap');
 
   * {
@@ -18,7 +17,7 @@ const defaultStyle = css`
   body,
   #___gatsby {
     height: 100%;
-    ${tw`bg-gray-50`}
+    ${({ bgColor }) => (bgColor ? `background: ${bgColor}` : tw`bg-gray-50`)}
   }
 
   a,
@@ -45,9 +44,5 @@ const defaultStyle = css`
     }
   }
 `;
-
-const GlobalStyle: FunctionComponent = function () {
-  return <Global styles={defaultStyle} />;
-};
 
 export default GlobalStyle;

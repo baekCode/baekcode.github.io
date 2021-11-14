@@ -42,7 +42,7 @@ const NotFoundPage: FunctionComponent = function () {
 
   return (
     <Container>
-      <GlobalStyle />
+      <GlobalStyle bgColor={'#fff'} />
       <h1>404</h1>
       <img src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif" alt="" />
       <h3>페이지를 찾을 수 없습니다.</h3>
