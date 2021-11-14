@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 export const Container = styled.div`
-  ${tw`relative w-full h-80`}
+  ${tw`relative w-full h-48 sm:h-64 lg:h-80`}
 `;
 
 export const Background = styled(GatsbyImage)`
-  ${tw`absolute top-0 left-0 z-0 w-full h-80 object-cover filter blur-lg`}
+  ${tw`absolute top-0 left-0 z-0 w-full h-48 sm:h-64 lg:h-80 object-cover filter blur-lg`}
   filter: brightness(0.25);
 `;
 
@@ -19,7 +19,7 @@ export const GoBackButton = styled.button`
 `;
 
 export const Title = styled.div`
-  ${tw`overflow-hidden mt-auto overflow-ellipsis whitespace-normal break-words line-clamp-2 font-bold text-3xl sm:text-5xl`}
+  ${tw`overflow-hidden mt-auto overflow-ellipsis whitespace-normal break-words line-clamp-2 font-bold text-2xl sm:text-3xl lg:text-5xl`}
   -webkit-box-orient: vertical;
 `;
 
