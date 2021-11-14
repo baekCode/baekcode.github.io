@@ -62,10 +62,7 @@ export default function Index({
       siteMetadata: { title, description, siteUrl, avatarImg, githubUrl },
     },
     allMarkdownRemark: { edges: posts },
-    file: {
-      childImageSharp: { gatsbyImageData },
-      publicURL,
-    },
+    file: { publicURL },
   },
 }: IIndexProps) {
   const parsed = queryString.parse(search);
@@ -95,7 +92,6 @@ export default function Index({
     [],
   );
 
-  console.log(gatsbyImageData);
   return (
     <Layout
       title={title}
