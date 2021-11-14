@@ -27,15 +27,15 @@ export const MarkdownRenderer = styled.div`
   }
 
   h1 {
-    ${tw`text-4xl`}
+    ${tw`text-2xl sm:text-3xl lg:text-4xl`}
   }
 
   h2 {
-    ${tw`text-3xl`};
+    ${tw`text-xl sm:text-2xl lg:text-3xl`};
   }
 
   h3 {
-    ${tw`text-2xl`}
+    ${tw`text-lg sm:text-xl lg:text-2xl`}
   }
 
   // Adjust Quotation Element Style
