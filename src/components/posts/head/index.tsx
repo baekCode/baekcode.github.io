@@ -17,7 +17,7 @@ export default function PostHead({ thumbnail, title, date, categories }: IPostHe
         </GoBackButton>
         <Title children={title} />
         <PostData>
-          <div>{categories.join(' / ')}</div>
+          <div>{categories.map(item => `#${item}`).join(' ')}</div>
           <div>{date}</div>
         </PostData>
       </Inner>
