@@ -15,7 +15,7 @@ export const Inner = styled.div`
   ${tw`relative z-10 flex flex-col items-start w-full h-full p-5 sm:p-10 text-white`}
 `;
 export const GoBackButton = styled.button`
-  ${tw`grid place-items-center w-10 h-10 rounded-full bg-white text-black text-xl cursor-pointer shadow`}
+  ${tw`bg-transparent text-white text-xl cursor-pointer border-0 shadow`}
 `;
 
 export const Title = styled.div`
