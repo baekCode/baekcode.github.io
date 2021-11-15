@@ -14,7 +14,7 @@ export default function Comment() {
     const attributes: UtterancesAttributesType = {
       src: SRC,
       repo: REPOSITORY,
-      'issue-term': 'pathname',
+      'issue-term': 'title',
       label: 'Comment',
       theme: `github-light`,
       crossorigin: 'anonymous',
