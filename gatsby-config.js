@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `DEV baekcode`,
@@ -8,6 +12,18 @@ module.exports = {
     githubUrl: `https://github.com/baekcode`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `G-SL2GTJFGZ2`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-3352733856169433`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sitemap',
     {
