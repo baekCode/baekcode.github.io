@@ -1,6 +1,5 @@
 import React, { createRef, useEffect } from 'react';
 
-import { REPOSITORY, SRC } from '../../../constants';
 import { UtterancesAttributesType } from './types';
 
 export default function Comment() {
@@ -12,8 +11,8 @@ export default function Comment() {
     const utterances: HTMLScriptElement = document.createElement('script');
 
     const attributes: UtterancesAttributesType = {
-      src: SRC,
-      repo: REPOSITORY,
+      src: process.env.UTTERANC_SRC as string,
+      repo: process.env.GITHUB_REPOSITORY as string,
       'issue-term': 'title',
       label: 'Comment',
       theme: `github-light`,
