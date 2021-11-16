@@ -38,6 +38,11 @@ export const MarkdownRenderer = styled.div`
     ${tw`text-lg sm:text-xl lg:text-2xl`}
   }
 
+  h4,
+  h5 {
+    ${tw`text-base sm:text-lg font-semibold`}
+  }
+
   // Adjust Quotation Element Style
   blockquote {
     ${tw`my-5 py-1 px-4 rounded font-light text-xs text-gray-400 bg-gray-50`}
