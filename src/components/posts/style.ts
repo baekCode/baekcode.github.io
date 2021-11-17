@@ -25,7 +25,7 @@ export const Inner = styled.div`
 `;
 
 export const Title = styled.div`
-  ${tw`overflow-hidden mb-3 overflow-ellipsis whitespace-normal break-words line-clamp-2 font-bold text-xl`}
+  ${tw`overflow-hidden mb-3 overflow-ellipsis whitespace-normal break-words line-clamp-2 font-medium text-xl`}
 
   -webkit-box-orient: vertical;
 `;
