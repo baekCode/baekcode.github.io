@@ -18,7 +18,7 @@ export default function Layout({
   footerLink,
   children,
 }: ILayout) {
-  console.log('header', process.env.ADSENSE_ID);
+
   return (
     <>
       <Helmet>
