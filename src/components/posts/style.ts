@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 export const Container = styled.div`
-  ${tw`grid gap-4 grid-cols-2 md:grid-cols-4 px-5 py-2 sm:px-10 sm:py-5`}
+  ${tw`grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 px-5 py-2 sm:px-10 sm:py-5`}
 `;
 
 export const Item = styled(Link)`
