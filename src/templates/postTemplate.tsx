@@ -13,6 +13,7 @@ interface IPostTemplate {
       siteMetadata: {
         title: string;
         headingTitle: string;
+        author: string;
         avatarImg: string;
         githubUrl: string;
       };
@@ -34,7 +35,7 @@ interface IPostTemplate {
 export default function PostTemplate({
   data: {
     site: {
-      siteMetadata: { title: siteTitle, headingTitle, avatarImg, githubUrl },
+      siteMetadata: { title: siteTitle, headingTitle, author, avatarImg, githubUrl },
     },
     allMarkdownRemark: { edges },
   },
@@ -64,6 +65,7 @@ export default function PostTemplate({
       image={publicURL}
       logo={avatarImg}
       footerLink={githubUrl}
+      author={author}
     >
       <PostHead thumbnail={gatsbyImageData} title={title} date={date} categories={categories} />
       <PostBody html={html} />
@@ -78,6 +80,7 @@ export const queryMarkdownDataBySlug = graphql`
       siteMetadata {
         title
         headingTitle
+        author
         avatarImg
         githubUrl
       }

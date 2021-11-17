@@ -9,6 +9,7 @@ export interface ILayout {
   children: ReactNode;
   logo: string;
   footerLink: string;
+  author: string;
   selectedCategory?: string;
   categoryList?: {
     [key: string]: number;

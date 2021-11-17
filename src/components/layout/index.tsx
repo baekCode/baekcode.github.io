@@ -17,6 +17,7 @@ export default function Layout({
   categoryList,
   logo,
   footerLink,
+  author,
   children,
 }: ILayout) {
   return (
@@ -63,7 +64,7 @@ export default function Layout({
           }}
         >
           <Link to={footerLink} target={'_blank'}>
-            © {title}
+            {author}
           </Link>
         </Footer>
       </Container>

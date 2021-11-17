@@ -11,6 +11,7 @@ interface IAbout {
         headingTitle: string;
         description: string;
         siteUrl: string;
+        author: string;
         avatarImg: string;
         githubUrl: string;
       };
@@ -21,7 +22,7 @@ interface IAbout {
 export default function About({
   data: {
     site: {
-      siteMetadata: { title, headingTitle, description, siteUrl, avatarImg, githubUrl },
+      siteMetadata: { title, headingTitle, description, siteUrl, author, avatarImg, githubUrl },
     },
   },
 }: IAbout) {
@@ -33,6 +34,7 @@ export default function About({
       url={siteUrl}
       logo={avatarImg}
       image={avatarImg}
+      author={author}
       footerLink={githubUrl}
     >
       About
@@ -48,6 +50,7 @@ export const getPostList = graphql`
         headingTitle
         description
         siteUrl
+        author
         avatarImg
         githubUrl
       }
