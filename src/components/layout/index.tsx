@@ -9,6 +9,7 @@ import { ILayout } from './types';
 
 export default function Layout({
   title,
+  headingTitle,
   description,
   url,
   image,
@@ -18,7 +19,6 @@ export default function Layout({
   footerLink,
   children,
 }: ILayout) {
-
   return (
     <>
       <Helmet>
@@ -51,7 +51,7 @@ export default function Layout({
       <GlobalStyle />
       <Container>
         <Header
-          title={title}
+          title={headingTitle}
           logo={logo}
           selectedCategory={selectedCategory}
           categoryList={categoryList}

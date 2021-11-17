@@ -37,6 +37,7 @@ export interface IIndexProps {
     site: {
       siteMetadata: {
         title: string;
+        headingTitle: string;
         description: string;
         siteUrl: string;
         avatarImg: string;
@@ -59,7 +60,7 @@ export default function Index({
   location: { search },
   data: {
     site: {
-      siteMetadata: { title, description, siteUrl, avatarImg, githubUrl },
+      siteMetadata: { title, headingTitle, description, siteUrl, avatarImg, githubUrl },
     },
     allMarkdownRemark: { edges: posts },
     file: { publicURL },
@@ -95,6 +96,7 @@ export default function Index({
   return (
     <Layout
       title={title}
+      headingTitle={headingTitle}
       description={description}
       url={siteUrl}
       image={publicURL}
@@ -114,6 +116,7 @@ export const getPostList = graphql`
     site {
       siteMetadata {
         title
+        headingTitle
         description
         siteUrl
         avatarImg

@@ -4,8 +4,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `DEV baekcode`,
-    description: `Front-end & UI Developer Blog`,
+    title: `백주은 | 프론트엔드 엔지니어`,
+    headingTitle: `baekCode, BLOG`,
+    description: `UI 경험이 있는 프론트엔드 엔지니어 백주은입니다.`,
     author: `@baekcode`,
     siteUrl: `https://baekcode.github.io/`,
     avatarImg: `https://avatars.githubusercontent.com/u/44539224?v=4`,
