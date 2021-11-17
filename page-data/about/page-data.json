@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-about-tsx",
     "path": "/about/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"DEV baekcode","description":"Front-end & UI Developer Blog","siteUrl":"https://baekcode.github.io","avatarImg":"https://avatars.githubusercontent.com/u/44539224?v=4","githubUrl":"https://github.com/baekcode"}}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"백주은 | 프론트엔드 엔지니어","description":"UI 경험이 있는 프론트엔드 엔지니어 백주은입니다.","siteUrl":"https://baekcode.github.io","avatarImg":"https://avatars.githubusercontent.com/u/44539224?v=4","githubUrl":"https://github.com/baekcode"}}},"pageContext":{}},
     "staticQueryHashes": []}
