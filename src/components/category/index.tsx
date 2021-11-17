@@ -8,7 +8,7 @@ export default function Category({ selectedCategory, categoryList }: ICategory) 
   return (
     <div>
       <ul>
-        {Object.entries(categoryList).map(([name, count]) => (
+        {Object.entries(categoryList).sort(([keyA,],[keyB,])=> keyA.toUpperCase() < keyB.toUpperCase() ? -1 : 1).map(([name, count]) => (
           <Item key={name} active={selectedCategory === name}>
             <Link to={`/?category=${name}`}>
               {name} #{count}

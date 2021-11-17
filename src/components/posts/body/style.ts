@@ -55,9 +55,17 @@ export const MarkdownRenderer = styled.div`
   // Adjust List Element Style
   ol,
   ul {
-    ${tw`ml-5 py-2 list-disc list-outside`}
+    ${tw`ml-5 py-2 list-outside`}
   }
-
+  
+  ol {
+    ${tw`list-decimal`}
+  }
+  
+  ul {
+    ${tw`list-disc`}
+  }
+  
   .contains-task-list {
     ${tw`list-none list-inside`}
   }
