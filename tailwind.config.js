@@ -43,6 +43,10 @@ module.exports = {
       inset: {
         ...SIZE_SYSTEM,
       },
+      rotate: {
+        '-20': '20deg',
+        20: '20deg',
+      },
     },
   },
   variants: {
