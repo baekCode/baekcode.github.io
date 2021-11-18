@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import tw from 'twin.macro';
 
 const GlobalStyle = createGlobalStyle<{ bgColor?: string }>`
-  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&family=Noto+Serif+KR&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;500;600;700;800;900&family=Noto+Serif+KR&display=swap');
 
   * {
     padding: 0;
