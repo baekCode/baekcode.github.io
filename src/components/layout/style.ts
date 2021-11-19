@@ -24,6 +24,7 @@ export const HeaderInner = styled.div`
 export const HeaderLogo = styled.h1`
   a {
     ${tw`flex items-center text-2xl`}
+    line-height: 0
   }
 `;
 
