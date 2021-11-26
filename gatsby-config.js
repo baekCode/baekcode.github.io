@@ -8,7 +8,7 @@ module.exports = {
     headingTitle: `baekCode, BLOG`,
     description: `UI 경험이 있는 프론트엔드 엔지니어 백주은입니다.`,
     author: `@baekcode`,
-    siteUrl: `https://baekcode.github.io/`,
+    siteUrl: `https://baekcode.github.io`,
     avatarImg: `https://avatars.githubusercontent.com/u/44539224?v=4`,
     githubUrl: `https://github.com/baekcode`,
   },
@@ -26,17 +26,24 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/',
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
+        host: 'https://baekcode.github.io',
+        sitemap: 'https://baekcode.github.io/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://baekcode.github.io/',
+        siteUrl: 'https://baekcode.github.io',
         stripQueryString: true,
       },
     },
