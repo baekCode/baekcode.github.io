@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[341],{1808:function(t,e,a){a.r(e),a.d(e,{default:function(){return i}});var r=a(7294);function i(t){var e=t.data.site.siteMetadata;e.title,e.headingTitle,e.description,e.siteUrl,e.author,e.avatarImg,e.githubUrl;return r.createElement("div",null,"portfolio")}}}]);
+//# sourceMappingURL=component---src-pages-portfolio-tsx-f1ec95d99ded977fb07f.js.map
