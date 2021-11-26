@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import React from 'react';
 
 import Layout from '../components/layout';
@@ -25,3 +26,19 @@ export default function Portfolio({
     </Layout>
   );
 }
+
+export const getPostList = graphql`
+  query getSiteMeta2 {
+    site {
+      siteMetadata {
+        title
+        headingTitle
+        description
+        siteUrl
+        author
+        avatarImg
+        githubUrl
+      }
+    }
+  }
+`;
