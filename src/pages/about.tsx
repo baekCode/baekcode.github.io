@@ -3,7 +3,7 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-interface IAbout {
+export interface IOtherPage {
   data: {
     site: {
       siteMetadata: {
@@ -25,7 +25,7 @@ export default function About({
       siteMetadata: { title, headingTitle, description, siteUrl, author, avatarImg, githubUrl },
     },
   },
-}: IAbout) {
+}: IOtherPage) {
   return (
     <Layout
       title={title}
