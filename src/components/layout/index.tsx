@@ -48,6 +48,11 @@ export default function Layout({
           content="lbgradPGc5SxVkGEYQ3qAKDAjWiTrU_tCVQ35_sUhgU"
         />
         <meta name="naver-site-verification" content="54621279b405c5c93047c44c38d3db1f8c67183c" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3352733856169433"
+          crossOrigin="anonymous"
+        ></script>
       </Helmet>
       <GlobalStyle />
       <Container>
