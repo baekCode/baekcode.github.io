@@ -86,7 +86,7 @@ data-styled.g23[id="style__PostData-sc-ijk0er-5"]{content:"kFclQp,"}/*!sc*/
 <p>github, ssh, 그리고 디렉토리별 github 계정 정보 변경해주기..</p>
 <p>github 에서 21년 8월 13일 부터 ssh 권한으로 제한이 되었습니다.</p>
 <br>
-<h4>해야할 순서</h4>
+<h2>해야할 순서</h2>
 <ol>
 <li>ssh key 만들기</li>
 <li>ssh add</li>
@@ -94,7 +94,7 @@ data-styled.g23[id="style__PostData-sc-ijk0er-5"]{content:"kFclQp,"}/*!sc*/
 <li>config 설정</li>
 <li>.gitconfig 설정</li>
 </ol>
-<h5>ssh key 만들기</h5>
+<h3>ssh key 만들기</h3>
 <p><code class="language-text">cd ~/.ssh</code> 로 접근합니다.</p>
 <img width="473" alt="image" src="https://user-images.githubusercontent.com/44539224/161985766-1ee2f3ac-0e72-46cd-afc1-bd787c4f7a2d.png">
 <br>
@@ -105,7 +105,7 @@ data-styled.g23[id="style__PostData-sc-ijk0er-5"]{content:"kFclQp,"}/*!sc*/
 (아무것도 입력안하면 패스워드 사용안함)</p>
 <p>여기서 패스워드 입력하게되면 사용할때마다 패스워드 입력 해야하는..</p>
 <p>그리고 key 크기를 입력 안하게되면 기본 값으로 됩니다. (기본3072 ~ 최대 4096)</p>
-<h5>ssh add</h5>
+<h3>ssh add</h3>
 <p><code class="language-text">ssh-add test_ssh</code></p>
 <img width="473" alt="image" src="https://user-images.githubusercontent.com/44539224/161987464-112a92d3-dc66-4652-bfbd-e480582bb2ce.png">
 <p>아까 만들었었던 test_ssh 를 등록하는 과정입니다.</p>
@@ -114,7 +114,7 @@ data-styled.g23[id="style__PostData-sc-ijk0er-5"]{content:"kFclQp,"}/*!sc*/
 <p>등록된 ssh 를 확인하고싶으면 <code class="language-text">ssh-add -l</code></p>
 <img width="473" alt="image" src="https://user-images.githubusercontent.com/44539224/161988210-68af4e23-5871-4859-a7ae-16c38fe6fad6.png">
 <p>저는 회사, 개인, 테스트용 이렇게 총 3개가 등록되어 있습니다.</p>
-<h5>github ssh 등록</h5>
+<h3>github ssh 등록</h3>
 <p>github.com 접속하고 로그인 하신 후에 본인 아바타 누르신 후 <code class="language-text">settings</code> 으로</p>
 <img width="242" alt="image" src="https://user-images.githubusercontent.com/44539224/161988827-02cd2e9f-8d60-43d0-9bec-e5a0ffb69bd2.png">
 <p><code class="language-text">SSH and GPG keys</code> 에서 <code class="language-text">new SSH key</code> 를 눌러서 ssh 등록을 해주세요.</p>
@@ -122,13 +122,13 @@ data-styled.g23[id="style__PostData-sc-ijk0er-5"]{content:"kFclQp,"}/*!sc*/
 <p>여기서 등록 하실때는 public 인 <code class="language-text">test_ssh.pub</code> 의 내용을 등록 하시면됩니다.</p>
 <p><code class="language-text">cat test_ssh.pub</code> 을 치게되시면 내용이 나오는데 <code class="language-text">ssh-rsa ~ 본인 이메일까지</code> 복사해서 등록해주세요.</p>
 <img width="208" alt="image" src="https://user-images.githubusercontent.com/44539224/161989545-9945349e-eab7-47c5-ab73-f7e8e012c7f2.png">
-<h5>config 등록 (여기서 이해가 중요함)</h5>
+<h3>config 등록 (여기서 이해가 중요함)</h3>
 <p><code class="language-text">touch config</code> 로 config 파일을 생성하세요.
 (<code class="language-text">vim or vi config</code> 로 생성없이 바로 접근하셔도 됩니다.)</p>
 <img width="466" alt="image" src="https://user-images.githubusercontent.com/44539224/161991047-8fbc49b5-26a1-4c87-a4e3-b8f3c83604c4.png">
 <p>스크린샷의 등록용 처럼 작성해주시면 됩니다. (블로그 글 작성하면서 이해를 위한 예시 설명입니다.)</p>
 <p>여기서 Host 에 작성한 부분은 주로 사용될 예정이니 편한걸로 작성해주세요</p>
-<h5>.gitconfig 등록 (디렉토리별 계정 정보 나누기)</h5>
+<h3>.gitconfig 등록 (디렉토리별 계정 정보 나누기)</h3>
 <p><code class="language-text">touch ~/.gitconfig</code> 로 config 파일을 생성하세요.
 (<code class="language-text">vim or vi ~/.gitconfig</code> 로 생성없이 바로 접근하셔도 됩니다.)</p>
 <img width="498" alt="image" src="https://user-images.githubusercontent.com/44539224/161992378-49617e9e-6d59-475a-b333-0581878cef02.png">
@@ -137,7 +137,7 @@ data-styled.g23[id="style__PostData-sc-ijk0er-5"]{content:"kFclQp,"}/*!sc*/
 <p>개인용, 회사용, 공부용 여러가지 나누기 위해 디렉토리를 별도로 설정해주세요.
 (디렉토리 나누실 이유없으면 global만 등록하고 스킵)</p>
 <p>해당 디렉토리에서 구분이 잘되었는지 확인하시면됩니다~</p>
-<h5>clone 및 remote 설정하기</h5>
+<h3>clone 및 remote 설정하기</h3>
 <p>이제 clone 을 할때 ssh 로 클론 하게 됩니다.</p>
 <img width="358" alt="image" src="https://user-images.githubusercontent.com/44539224/161993689-f48022ca-1017-4ccf-8042-9e72b293867b.png">
 <p>여기서 <code class="language-text">git@github.com:baekCode/레포명.git</code> 을 아까 세팅 해두었던</p>
