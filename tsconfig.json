@@ -1,20 +1,63 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "esnext",
-    "jsx": "preserve",
-    "lib": ["dom", "es2015", "es2017"],
-    "strict": true,
-    "noEmit": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
     "skipLibCheck": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "plugins": [{ "name": "typescript-plugin-tw-template" }]
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": "./",
+    "paths": {
+      "~env": [
+        "config/env"
+      ],
+      "~apis": [
+        "apis"
+      ],
+      "~apis/*": [
+        "apis/*"
+      ],
+      "~apps": [
+        "apps"
+      ],
+      "~apps/*": [
+        "apps/*"
+      ],
+      "~core": [
+        "core"
+      ],
+      "~core/*": [
+        "core/*"
+      ],
+      "~pages": [
+        "pages"
+      ],
+      "~pages/*": [
+        "pages/*"
+      ],
+      "~styles": [
+        "styles"
+      ],
+      "~styles/*": [
+        "styles/*"
+      ]
+    },
+    "types": [
+      "node",
+      "react/next",
+    ]
   },
-  "include": ["src/**/*.tsx"],
-  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

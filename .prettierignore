@@ -1,4 +1,7 @@
-.cache
-package.json
-package-lock.json
-public
+.eslintignore
+.gitignore
+.prettierignore
+.ebignore
+/.circleci/
+/assets/
+
