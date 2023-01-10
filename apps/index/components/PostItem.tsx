@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const PostItem = ({ post }: Props) => {
-  const date = new Date(post.last_edited_time).toLocaleString('default', {
+  const date = new Date(post.last_edited_time).toLocaleString('ko', {
     month: 'short',
     day: '2-digit',
     year: 'numeric',
