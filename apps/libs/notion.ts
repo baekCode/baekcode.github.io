@@ -1,5 +1,9 @@
 import { Client } from '@notionhq/client';
-import { DatabaseObjectResponse, QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints';
+import {
+  DatabaseObjectResponse,
+  GetPageResponse,
+  QueryDatabaseResponse,
+} from '@notionhq/client/build/src/api-endpoints';
 
 export type PostResult = Extract<QueryDatabaseResponse['results'][number], { properties: Record<string, unknown> }>;
 type PropertyValueMap = PostResult['properties'];
@@ -23,6 +27,28 @@ export type DatabaseItem = PostResult & {
   };
 };
 
+export type PageResult = Extract<GetPageResponse, { properties: Record<string, unknown> }>;
+type PagePropertyValueMap = PageResult['properties'];
+type PagePropertyValue = PagePropertyValueMap[string];
+type PagePropertyValueType = PagePropertyValue['type'];
+type PageExtractedPropertyValue<TType extends PagePropertyValueType> = Extract<PagePropertyValue, { type: TType }>;
+
+export type PagePropertyValueTitle = PageExtractedPropertyValue<'title'>;
+export type PagePropertyValueRichText = PageExtractedPropertyValue<'rich_text'>;
+export type PagePropertyValueMultiSelect = PageExtractedPropertyValue<'multi_select'>;
+export type PagePropertyValueStatus = PageExtractedPropertyValue<'status'>;
+export type PagePropertyValueCreatedTime = PageExtractedPropertyValue<'created_time'>;
+
+export type PageItem = PageResult & {
+  properties: {
+    title: PagePropertyValueTitle;
+    createAt: PagePropertyValueCreatedTime;
+    tags: PagePropertyValueMultiSelect;
+    description: PagePropertyValueRichText;
+    status: PagePropertyValueStatus;
+  };
+};
+
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
@@ -43,12 +69,25 @@ export const getDatabase = async () => {
 
 export const getPage = async (pageId: string) => {
   const response = await notion.pages.retrieve({ page_id: pageId });
-  return response;
+  console.log('@@@getPage', response);
+  return response as PageItem;
 };
 
 export const getBlocks = async (blockId: string) => {
-  const blocks = await notion.blocks.children.list({
+  let content = [];
+  let blocks = await notion.blocks.children.list({
     block_id: blockId,
   });
-  return blocks;
+
+  content = [...blocks.results];
+
+  while (blocks.has_more) {
+    blocks = await notion.blocks.children.list({
+      block_id: blockId,
+      start_cursor: blocks.next_cursor ?? undefined,
+    });
+
+    content = [...content, ...blocks.results];
+  }
+  return content;
 };
