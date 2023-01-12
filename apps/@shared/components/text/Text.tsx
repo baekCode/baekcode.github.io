@@ -1,6 +1,5 @@
 import { RichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
 import styled from '@emotion/styled';
-import { css } from '@emotion/css';
 
 interface Props {
   value: RichTextItemResponse[];
@@ -8,11 +7,12 @@ interface Props {
 
 export const Text = ({ value }: Props) => {
   const [text] = value;
-  const {
-    annotations: { bold, code, color, italic, strikethrough, underline },
-    plain_text,
-    href,
-  } = text;
+
+  if (!text) {
+    return;
+  }
+  const { annotations, plain_text, href } = text;
+  const { bold, code, color, italic, strikethrough, underline } = annotations;
 
   return (
     <PlainText
