@@ -39,7 +39,6 @@ export const renderBlock = (block: BlockObjectResponse) => {
       );
     case 'bulleted_list_item':
       value = block[type];
-      console.log('@@value', value, block, type);
       return (
         <li>
           <Text value={value.rich_text} />
@@ -47,7 +46,6 @@ export const renderBlock = (block: BlockObjectResponse) => {
       );
     case 'numbered_list_item':
       value = block[type];
-      console.log('@@value', value, block, type);
       return (
         <li>
           <Text value={value.rich_text} />
