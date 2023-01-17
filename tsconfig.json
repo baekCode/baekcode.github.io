@@ -51,6 +51,12 @@
       ],
       "~styles/*": [
         "styles/*"
+      ],
+      "~utils": [
+        "utils"
+      ],
+      "~utils/*": [
+        "utils/*"
       ]
     },
     "types": [
