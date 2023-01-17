@@ -9,7 +9,7 @@ export const Text = ({ value }: Props) => {
   const [text] = value;
 
   if (!text) {
-    return;
+    return null;
   }
   const { annotations, plain_text, href } = text;
   const { bold, code, color, italic, strikethrough, underline } = annotations;
